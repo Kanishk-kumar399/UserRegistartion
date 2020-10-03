@@ -2,19 +2,19 @@ import java.util.*;
 public class UserRegistration
 {
 	Scanner sc=new Scanner(System.in);
-	public void validFirstName()
+	public void validLastName()
 	{
-		System.out.println("Enter the Name");
+		System.out.println("Enter the Last Name");
 		String name=sc.next();
 		String regex="^[A-Z][a-z]{2,}";
 		if(name.matches(regex))
-			System.out.println("Name is correct.");
+			System.out.println("Last Name is correct.");
 		else
-			System.out.println("Name is Incorrect.");
+			System.out.println("Last Name is Incorrect.");
 	}
 	public static void main(String args[])
 	{
 	UserRegistration user=new UserRegistration();
-	user.validFirstName();
+	user.validLastName();
 	}
 }
