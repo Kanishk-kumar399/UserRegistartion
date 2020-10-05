@@ -6,7 +6,7 @@ public class UserRegistration
 	{
 		System.out.println("Enter the Password");
 		String password=sc.nextLine();
-		String regex="(?=.*[A-Z]).{8,}";
+		String regex= "(?=.*[A-Z]).{8,}";
 		if(password.matches(regex))
 			System.out.println("Password is correct.");
 		else
