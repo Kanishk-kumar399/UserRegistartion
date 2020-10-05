@@ -4,7 +4,7 @@ public class UserRegistration
 	Scanner sc=new Scanner(System.in);
 	public void validFirstName()
 	{
-		System.out.println("Enter the Name");
+		System.out.println("Enter the Name:");
 		String name=sc.next();
 		String regex="^[A-Z][a-z]{2,}";
 		if(name.matches(regex))
@@ -47,7 +47,7 @@ public class UserRegistration
 	{
 		System.out.println("Enter the Password");
 		String password=sc.nextLine();
-		String regex="(?=.[A-Z])(?=.[0-9])(?=.*[^A-Za-z0-9 ]).{8,}";
+		String regex="(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9 ]).{8,}";
 		if(password.matches(regex))
 			System.out.println("Password is correct.");
 		else
