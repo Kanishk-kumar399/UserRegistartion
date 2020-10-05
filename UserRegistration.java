@@ -35,7 +35,7 @@ public class UserRegistration
 	public void validMobileNumber()
 	{
 		System.out.println("Enter the Mobile Number");
-		System.out.println();
+		sc.nextLine();
 		String mobNumber=sc.nextLine();
 		String regex="^(\\d{2})\\s{1}\\d{10}";
 		if(mobNumber.matches(regex))
@@ -53,7 +53,37 @@ public class UserRegistration
 		else
 			System.out.println("Password is Incorrect.");
 	}
-	
+	public void checkMultipleEmail()
+	{
+	String regex="[\\w-\\+]+(\\.[\\w]+)*@[\\w-]+(\\.[\\w]+)*(\\.[a-z]{2,})$";
+	ArrayList<String> email=new ArrayList<String>();
+	email.add("abc@yahoo.com");
+	email.add("abc-100@yahoo.com");
+	email.add("abc.100@yahoo.com");
+	email.add("abc111@abc.com");
+	email.add("abc-100@abc.net");
+	email.add("abc.100@abc.com.au");
+	email.add("abc@1.com");
+	email.add("abc@gmail.com.com");
+	email.add("abc+100@gmail.com");
+	email.add("abc");
+	email.add("abc@com.my");
+	email.add("abc123@gmail.a");
+	email.add("abc123@.com.com");
+	email.add("abc@%*.com");
+	email.add("abc@gmail.com.aa.uu");
+	email.add("abc@gmail.com.1a");
+	email.add("abc..2002@gmail.com");
+	email.add("abc()*@gmail.com");
+	email.add(".abc@gmail.com");
+	for(String i:email)
+		{
+		if(i.matches(regex))
+		System.out.println("True");
+		else
+		System.out.println("False");
+		}
+	}
 	public static void main(String args[])
 	{
 	UserRegistration user=new UserRegistration();
@@ -62,5 +92,7 @@ public class UserRegistration
 	user.validEmail();
 	user.validMobileNumber();
 	user.validPassword();
+	UserRegistration email=new UserRegistration();
+	email.checkMultipleEmail();
 	}
 }
