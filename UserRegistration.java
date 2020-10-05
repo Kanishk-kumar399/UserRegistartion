@@ -4,7 +4,7 @@ public class UserRegistration
 	Scanner sc=new Scanner(System.in);
 	public void validFirstName()
 	{
-		System.out.println("Enter the Name");
+		System.out.println("Enter the Name:");
 		String name=sc.next();
 		String regex="^[A-Z][a-z]{2,}";
 		if(name.matches(regex))
